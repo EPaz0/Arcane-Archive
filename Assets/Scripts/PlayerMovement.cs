@@ -12,6 +12,11 @@ public class PlayerMovement : MonoBehaviour
     public float sprintSpeed;
     public float groundDrag;
 
+    [Header("Crouching")]
+    public float crouchSpeed;
+    public float crouchYScale;
+    private float startYScale;
+
     public float jumpForce;
     public float jumpCooldown;
     public float airMultiplier;
@@ -20,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Keybinds")]
     public KeyCode jumpkey = KeyCode.Space;
     public KeyCode sprintkey = KeyCode.LeftShift;
+    public KeyCode crouchkey = KeyCode.LeftControl;
+
 
     [Header("Ground Check")]
     public float playerHeight;
@@ -43,12 +50,18 @@ public class PlayerMovement : MonoBehaviour
     {
         walking,
         sprinting,
+        crouching,
         air
     }
 
     private void StateHandler()
     {
-        if(grounded && Input.GetKey(sprintkey))
+        if (Input.GetKey(crouchkey))
+        {
+            state = MovementState.crouching;
+            moveSpeed = crouchSpeed;
+        }
+        else if(grounded && Input.GetKey(sprintkey))
         {
             state = MovementState.sprinting;
             moveSpeed = sprintSpeed;
@@ -71,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         readyToJump = true;
+        startYScale = transform.localScale.y;
     }
 
     private void Update()
@@ -111,6 +125,18 @@ public class PlayerMovement : MonoBehaviour
             readyToJump = false;
             Jump();
             Invoke(nameof(ResetJump), jumpCooldown);
+        }
+        // start crouch
+        if (Input.GetKeyDown(crouchkey))
+        {
+            transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
+            rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+        }
+
+        // stop crouch
+        if (Input.GetKeyUp(crouchkey))
+        {
+            transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
         }
     }
 
