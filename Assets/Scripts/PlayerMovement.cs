@@ -7,7 +7,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed;
+    private float moveSpeed;
+    public float walkSpeed;
+    public float sprintSpeed;
     public float groundDrag;
 
     public float jumpForce;
@@ -17,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Keybinds")]
     public KeyCode jumpkey = KeyCode.Space;
+    public KeyCode sprintkey = KeyCode.LeftShift;
 
     [Header("Ground Check")]
     public float playerHeight;
@@ -35,6 +38,34 @@ public class PlayerMovement : MonoBehaviour
     [Header("Gravity")]
     public float extraGravity = 10f;  // Adjust this value to change gravity intensity
 
+    public MovementState state;
+    public enum MovementState
+    {
+        walking,
+        sprinting,
+        air
+    }
+
+    private void StateHandler()
+    {
+        if(grounded && Input.GetKey(sprintkey))
+        {
+            state = MovementState.sprinting;
+            moveSpeed = sprintSpeed;
+        }
+
+        else if (grounded)
+        {
+            state = MovementState.walking;
+            moveSpeed = walkSpeed;
+        }
+
+        else
+        {
+            state = MovementState.air;
+        }
+    }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -48,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f, whatIsGround);
         MyInput();
         SpeedControl();
+        StateHandler();
 
         // Handle drag
         if (grounded)
