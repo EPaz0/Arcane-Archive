@@ -32,6 +32,9 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
+    [Header("Gravity")]
+    public float extraGravity = 10f;  // Adjust this value to change gravity intensity
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -56,6 +59,12 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
+
+        // Apply additional gravity if the player is not grounded
+        if (!grounded)
+        {
+            rb.AddForce(Vector3.down * extraGravity, ForceMode.Acceleration); // Apply extra gravity when not grounded
+        }
     }
 
     private void MyInput() 
