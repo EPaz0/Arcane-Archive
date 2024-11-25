@@ -12,6 +12,7 @@ public class EnemyAI : MonoBehaviour
     private int currentWaypoint;
 
     [SerializeField] int attackDistance;
+    [SerializeField] AudioSource intenseAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,13 +45,28 @@ public class EnemyAI : MonoBehaviour
             if (Vector3.Distance(transform.position, other.transform.position) <= attackDistance)
             {
                 agent.destination = transform.position;
-                Debug.Log("attack");
             }
             else
             {
                 agent.destination = other.transform.position;
             }
 
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            intenseAudio.volume = 1;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            intenseAudio.volume = 0;
         }
     }
 }
