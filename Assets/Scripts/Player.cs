@@ -64,6 +64,9 @@ public class Player : MonoBehaviour
                         inHandItem.transform.position = Vector3.zero;
                         inHandItem.transform.rotation = Quaternion.identity;
                         inHandItem.transform.SetParent(pickUpParent.transform, false);
+
+                        inHandItem.GetComponent<Highlight>()?.ToggleHighlight(false);
+
                         if (rb != null)
                         {
                             rb.isKinematic = true;

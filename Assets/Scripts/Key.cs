@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
+    public GameObject cubeToDisable;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Opening door")) // Check if the object is the door
+        {
+            Debug.Log("Key entered the trigger zone!");
+            cubeToDisable.SetActive(false); // Disable the cube
+        }
     }
 }
