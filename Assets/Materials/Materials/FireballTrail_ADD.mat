@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FireballTrail
+  m_Name: FireballTrail_ADD
   m_Shader: {fileID: -6465566751694194690, guid: 1b9f9cf426d550141a3b4b2e7911ee6c,
     type: 3}
   m_Parent: {fileID: 0}
@@ -60,7 +60,7 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _Color: {r: 2.9960787, g: 2.9960787, b: 2.9960787, a: 1}
+    - _Color: {r: 23.96863, g: 23.96863, b: 23.96863, a: 1}
     - _MainTexSpeed: {r: 0, g: 0, b: 0, a: 0}
     - _MainTexTiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
