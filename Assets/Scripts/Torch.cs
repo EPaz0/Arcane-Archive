@@ -5,6 +5,7 @@ using UnityEngine;
 public class Torch : MonoBehaviour
 {
     public ParticleSystem flameParticle; // Assign in the Inspector
+    public AudioSource flameAudio;
     private bool isLit = false;
 
     private void OnTriggerEnter(Collider other)
@@ -16,6 +17,7 @@ public class Torch : MonoBehaviour
             isLit = true;
             flameParticle.Play(); // Enable particle system
             Destroy(other.gameObject); // Destroy the fireball
+            flameAudio.Play();
             TorchManager.Instance.TorchLit(); // Notify the manager
         }
     }

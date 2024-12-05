@@ -218,6 +218,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3654739681354966537, guid: dd986d04bcc6dc748a53d8c3d1d42a6d,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4811017566070180577, guid: dd986d04bcc6dc748a53d8c3d1d42a6d,
         type: 3}
       propertyPath: playOnAwake
@@ -247,6 +252,12 @@ Transform:
 --- !u!198 &481389477 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1781949194303238864, guid: dd986d04bcc6dc748a53d8c3d1d42a6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 481389475}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &481389478 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3654739681354966537, guid: dd986d04bcc6dc748a53d8c3d1d42a6d,
     type: 3}
   m_PrefabInstance: {fileID: 481389475}
   m_PrefabAsset: {fileID: 0}
@@ -445,6 +456,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654739681354966537, guid: dd986d04bcc6dc748a53d8c3d1d42a6d,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4811017566070180577, guid: dd986d04bcc6dc748a53d8c3d1d42a6d,
         type: 3}
@@ -660,6 +676,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654739681354966537, guid: dd986d04bcc6dc748a53d8c3d1d42a6d,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4811017566070180577, guid: dd986d04bcc6dc748a53d8c3d1d42a6d,
         type: 3}
@@ -1361,6 +1382,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1748797215 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3654739681354966537, guid: dd986d04bcc6dc748a53d8c3d1d42a6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 921376836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1873303274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1423,6 +1450,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6513309729722063871, guid: 3f24c80895a77fa4bba15f9bd599a41b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6513309729722063871, guid: 3f24c80895a77fa4bba15f9bd599a41b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1593,6 +1630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flameParticle: {fileID: 481389477}
+  flameAudio: {fileID: 481389478}
 --- !u!65 &1903564763
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1805,6 +1843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flameParticle: {fileID: 921376838}
+  flameAudio: {fileID: 1748797215}
 --- !u!65 &1966511272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1826,6 +1865,12 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.19071686, y: 0.714548, z: 0.2132311}
   m_Center: {x: 0.000000011175871, y: 0.357274, z: -0.00000010430813}
+--- !u!82 &2143384823 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1327634938616085978, guid: d16ca336013d41c41a3d1da695f4257b,
+    type: 3}
+  m_PrefabInstance: {fileID: 5892412570305309167}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1996296676130420981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2381,6 +2426,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1185672705772176503, guid: d16ca336013d41c41a3d1da695f4257b,
+        type: 3}
+      propertyPath: flameAudio
+      value: 
+      objectReference: {fileID: 2143384823}
+    - target: {fileID: 1327634938616085978, guid: d16ca336013d41c41a3d1da695f4257b,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1438094229503681108, guid: d16ca336013d41c41a3d1da695f4257b,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -58,12 +58,16 @@ public class Player : MonoBehaviour
                         //Debug.Log(hit.collider.name);
                         Rigidbody rb = hit.collider.GetComponent<Rigidbody>();
                         Collider objCollider = hit.collider.GetComponent<Collider>();
-
+                        
+                  
 
                         inHandItem = hit.collider.gameObject;
+
+
                         inHandItem.transform.position = Vector3.zero;
                         inHandItem.transform.rotation = Quaternion.identity;
                         inHandItem.transform.SetParent(pickUpParent.transform, false);
+
 
                         inHandItem.GetComponent<Highlight>()?.ToggleHighlight(false);
 
@@ -77,6 +81,8 @@ public class Player : MonoBehaviour
                             objCollider.enabled = false; // Disable collider to avoid pushing
                         }
 
+
+                   
                         return;
                     }
                 }
@@ -84,17 +90,10 @@ public class Player : MonoBehaviour
 
         }
 
-
-
-
-        /*
         if (inHandItem != null)
         {
-            return;
-        }*/
-
-
-        
+            pickUpUI.SetActive(false);
+        }
 
         if (Input.GetKeyDown(KeyCode.Q)) 
         {
