@@ -5,50 +5,37 @@ using TMPro;
 
 public class NPCSystem : MonoBehaviour
 {
-    public GameObject d_template;
-    public GameObject canva;
+    public DialogueManager dialogueManager; // Drag your DialogueManager here
+    private bool playerDetection = false;
 
-    bool player_detection = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (player_detection && Input.GetKeyDown(KeyCode.F) && !PlayerMovement.dialogue) 
+        if (playerDetection && Input.GetKeyDown(KeyCode.F))
         {
-            PlayerMovement.dialogue = true;
-            NewDialgoue("Hello there! How are you doing?");
-            NewDialgoue("Test");
-        }
-        
-    }
-    void NewDialgoue(string text)
-    {
-        GameObject template_clone = Instantiate(d_template, d_template.transform);
-        template_clone.transform.parent = canva.transform;
-        template_clone.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = text;
+            string[] dialogueLines = {
+                "Hello there, adventurer!",
+                "Your journey begins here. Be cautious and brave!",
+                "Good luck!"
+            };
 
+            dialogueManager.StartDialogue(dialogueLines);
+        }
     }
+
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Entered Trigger: " + other.gameObject.name + " with tag: " + other.gameObject.tag);
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            player_detection = true;
-            
+            playerDetection = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-     
-          player_detection = false;
-        Debug.Log("Player exited");
-
+        if (other.CompareTag("Player"))
+        {
+            playerDetection = false;
+        }
     }
 }
+
