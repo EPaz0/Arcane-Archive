@@ -30,8 +30,8 @@ public class NPCSystem : MonoBehaviour
     void NewDialgoue(string text)
     {
         GameObject template_clone = Instantiate(d_template, d_template.transform);
-        template_clone.transform.SetParent = canva.transform;
-        template_clone.transform.GetChild(1).GetComponent<TextMeshPRoUGUI>().text = text;
+        template_clone.transform.parent = canva.transform;
+        template_clone.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = text;
 
     }
     private void OnTriggerEnter(Collider other)
