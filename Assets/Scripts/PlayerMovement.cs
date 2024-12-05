@@ -91,29 +91,31 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerMovement.dialogue)
+        if (dialogue)
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            MyInput();
-
-        }
-        else 
-        {
-            Cursor.lockState = CursorLockMode.None;
+            // Freeze the player and unlock the cursor during dialogue
+            Cursor.lockState = CursorLockMode.None; // Unlock the cursor for interaction
             Cursor.visible = true;
+            return; // Skip movement-related logic
         }
-        // Ground check using a Raycast (more reliable)
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f, whatIsGround);
-        MyInput();
-        SpeedControl();
-        StateHandler();
-
-        // Handle drag
-        if (grounded)
-            rb.drag = groundDrag;
         else
-            rb.drag = 0;
+        {
+            // Normal game controls
+            Cursor.lockState = CursorLockMode.Locked; // Lock the cursor for camera control
+            Cursor.visible = false;
+
+            // Ground check using a Raycast (more reliable)
+            grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f, whatIsGround);
+            MyInput();
+            SpeedControl();
+            StateHandler();
+
+            // Handle drag
+            if (grounded)
+                rb.drag = groundDrag;
+            else
+                rb.drag = 0;
+        }
     }
 
     private void FixedUpdate()

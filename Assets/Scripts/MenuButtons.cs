@@ -11,4 +11,13 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Alex");
     }
 
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
