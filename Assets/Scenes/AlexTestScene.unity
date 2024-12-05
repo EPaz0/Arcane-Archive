@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 0.4
+  m_AmbientIntensity: 0.45
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: e523c896238589445ae28370258d26c6, type: 2}
@@ -9314,12 +9314,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 660570657}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &663638247 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6367590161906116767, guid: 132d2ac3d86d82840b95906a9a8e0822,
-    type: 3}
-  m_PrefabInstance: {fileID: 1599039881}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &676442530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11597,6 +11591,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &996218488 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 413236941526513591, guid: 132d2ac3d86d82840b95906a9a8e0822,
+    type: 3}
+  m_PrefabInstance: {fileID: 1599039881}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1005441423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15842,7 +15842,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.29718286, g: 0.9137466, b: 0.06773043, a: 1}
+  m_Color: {r: 0.76819396, g: 0.31243458, b: 0.1149184, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -19393,7 +19393,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 663638247}
+      objectReference: {fileID: 996218488}
     - target: {fileID: 8330446961906099056, guid: b90daf1be02e9d542b6824e32d7fdfb2,
         type: 3}
       propertyPath: redVignette
