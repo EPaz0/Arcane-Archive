@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 4160155192526819445}
   m_Layer: 0
   m_Name: PlayerObj
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -591,7 +591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickableLayermask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
   playerCameraTransform: {fileID: 4239525374225576428}
   pickUpUI: {fileID: 0}
   hitRange: 3

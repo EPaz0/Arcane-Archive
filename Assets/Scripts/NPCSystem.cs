@@ -14,8 +14,8 @@ public class NPCSystem : MonoBehaviour
         {
             string[] dialogueLines = {
                 "Hello there, adventurer!",
-                "Your journey begins here. Be cautious and brave!",
-                "Good luck!"
+                "Welcome to endless library, to escape you must find the key and place it infront of the door",
+                "Your magic will light the way (Use mouse 1 to shoot fireballs)"
             };
 
             dialogueManager.StartDialogue(dialogueLines);
