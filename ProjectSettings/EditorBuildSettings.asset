@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Menu.unity
+    guid: b46bd29cec07f0c41b4d75ac299013ca
+  - enabled: 1
+    path: Assets/Scenes/Tutorial Room.unity
+    guid: 9f20b874a55804040a2970029bb1d5a0
+  - enabled: 1
+    path: Assets/Scenes/MaxLevel.unity
+    guid: fdc252b2a143f1e4587d818da7df63e3
+  - enabled: 1
+    path: Assets/Scenes/Helwa.unity
+    guid: 9db2d21d439e6a14cb10abe2b81d7e0b
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: c7a8e35303f749f4b99f276d7c643aed
   m_configObjects: {}
