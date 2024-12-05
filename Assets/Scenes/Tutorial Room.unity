@@ -5361,91 +5361,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 991218813768021285, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -179
-      objectReference: {fileID: 0}
-    - target: {fileID: 991218813768021285, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -421.33
-      objectReference: {fileID: 0}
-    - target: {fileID: 1330751182653207248, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 65
-      objectReference: {fileID: 0}
-    - target: {fileID: 1330751182653207248, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 65
-      objectReference: {fileID: 0}
-    - target: {fileID: 1996283269776083058, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 1996283269776083058, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2051491618333223244, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3958927513678386705, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -63
-      objectReference: {fileID: 0}
-    - target: {fileID: 3958927513678386705, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 251
-      objectReference: {fileID: 0}
-    - target: {fileID: 5526628698689490130, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5526628698689490130, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 5526628698689490130, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 6623518384960540244, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1923.9175
-      objectReference: {fileID: 0}
-    - target: {fileID: 6623518384960540244, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 352.7874
-      objectReference: {fileID: 0}
-    - target: {fileID: 6623518384960540244, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1.473
-      objectReference: {fileID: 0}
-    - target: {fileID: 6623518384960540244, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -390.8353
-      objectReference: {fileID: 0}
-    - target: {fileID: 7873263779029208361, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_Name
-      value: Press Space
-      objectReference: {fileID: 0}
     - target: {fileID: 8842123061310879622, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
         type: 3}
       propertyPath: m_Pivot.x
@@ -5545,16 +5460,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9196067348482239638, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1070
-      objectReference: {fileID: 0}
-    - target: {fileID: 9196067348482239638, guid: 1eafc4dde6463ab4d98f8e4f60fd7316,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -858.97
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
