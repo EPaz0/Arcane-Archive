@@ -38,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
     float horizontalInput;
     float verticalInput;
 
+    static public bool dialogue = false;
+
     Vector3 moveDirection;
 
     Rigidbody rb;
@@ -89,6 +91,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (PlayerMovement.dialogue)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            MyInput();
+
+        }
+        else 
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
         // Ground check using a Raycast (more reliable)
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f, whatIsGround);
         MyInput();
@@ -104,7 +118,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MovePlayer();
+
+        if (!dialogue) 
+        {
+            MovePlayer();
+        }
+        
 
         // Apply additional gravity if the player is not grounded
         if (!grounded)
