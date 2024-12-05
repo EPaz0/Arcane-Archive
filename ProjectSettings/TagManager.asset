@@ -13,8 +13,9 @@ TagManager:
   - whatIsGround
   - Water
   - UI
+  - Player
+  - Enemy
   - pickable
-  - 
   - 
   - 
   - 
