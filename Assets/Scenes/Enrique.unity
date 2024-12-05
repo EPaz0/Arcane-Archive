@@ -2244,6 +2244,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7286295145987870214, guid: a7d690595ed51e44faf84f9b24710a49,
+        type: 3}
+      propertyPath: impactVX
+      value: 
+      objectReference: {fileID: 3846023580411949685, guid: 23f23914a531caf4fbc5c3586715478f,
+        type: 3}
     - target: {fileID: 7940569413825930824, guid: a7d690595ed51e44faf84f9b24710a49,
         type: 3}
       propertyPath: m_Name
