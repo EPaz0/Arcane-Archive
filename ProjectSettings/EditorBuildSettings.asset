@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: c7a8e35303f749f4b99f276d7c643aed
+  - enabled: 1
+    path: Assets/Scenes/AlexTestScene.unity
+    guid: 7f843d7a08e749d4e85e03fe92a27f32
   m_configObjects: {}

@@ -7794,7 +7794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7aabbbac2a7a294491711fcb6b0edda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: Helwa
+  nextSceneName: AlexTestScene
 --- !u!65 &971974201
 BoxCollider:
   m_ObjectHideFlags: 0
